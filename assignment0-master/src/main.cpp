@@ -3,12 +3,17 @@
 
 using namespace std;
 
-int main(int argc, char ** argv) {
-    string nama ;
-    cout <<"silahkan masukkan nama anda: ";
+int main() {
+    string nama;
+
+    cout << "Silakan masukkan nama Anda: ";
     getline(cin, nama);
 
-    cout << "Hello " << nama << endl;
+    if (nama.empty()) {
+        cout << "Nama tidak boleh kosong!" << endl;
+    } else {
+        cout << "Hello, " << nama << "!" << endl;
+    }
 
     return 0;
 }
